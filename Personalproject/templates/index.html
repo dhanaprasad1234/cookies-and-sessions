@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+        {% csrf_token %}
+       <p>{{ form.as_p }}</p>
+        {% for field in form %}
+            {% if field.errors %}
+                <div style="color: red;">
+                    {% for error in field.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+<!--<form method="post">
+        {% csrf_token %}
+        <div>
+            {{ forms.student_name.label_tag }}
+            {{ forms.student_name }}
+            {% if forms.student_name.errors %}
+                <ul>
+                    {% for error in forms.student_name.errors %}
+                        <li style="color: red;">{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            {{ forms.student_attendence.label_tag }}
+            {{ forms.student_attendence }}
+            {% if forms.student_attendence.errors %}
+                <ul>
+                    {% for error in forms.student_attendence.errors %}
+                        <li style="color: red;">{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            {{ forms.student_Email.label_tag }}
+            {{ forms.student_Email }}
+            {% if forms.student_Email.errors %}
+                <ul>
+                    {% for error in forms.student_Email.errors %}
+                        <li style="color: red;">{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    <div>
+            {{ forms.student_contactNo.label_tag }}
+            {{ forms.student_contactNo }}
+            {% if forms.student_contactNo.errors %}
+                <ul>
+                    {% for error in forms.student_contactNo.errors %}
+                        <li style="color: red;">{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <button type="submit">Submit</button>-->
+
+</body>
+</html>
