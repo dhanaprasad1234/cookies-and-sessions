@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'cookiesproject.wsgi.application'
 #     }
 # }
 
-DATABASES={
+DATABASES ={
         'default':{
             'ENGINE':'django.db.backends.mysql',
             'NAME':'dj_mmform',

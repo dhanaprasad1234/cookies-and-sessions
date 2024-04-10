@@ -10,12 +10,12 @@ def home(request):
 def date_time_view(request):
     # form=LoginForm(request.GET)
 
-        '''user_id = request.GET['user_id']
+        user_id = request.GET['user_id']
         response = render(request,'datetime.html',{'user_id':user_id})
         response.set_cookie('user_id',user_id)
-        return response'''
+        return response
 
-def date_time_view(request):
+'''def date_time_view(request):
     if request.method == 'GET':
         form =LoginForm(request.GET)
         if form.is_valid():
@@ -28,7 +28,7 @@ def date_time_view(request):
         else:
             return HttpResponseBadRequest("Invalid form data")
     else:
-        return HttpResponseBadRequest("Only GET method is allowed for this view")
+        return HttpResponseBadRequest("Only GET method is allowed for this view")'''
 
 def result_views(request):
     user_id=request.COOKIES['user_id']
