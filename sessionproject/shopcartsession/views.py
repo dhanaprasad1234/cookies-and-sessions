@@ -9,8 +9,8 @@ def add_view(request):
         name = request.POST['name']
         quantity = request.POST['quantity']
         request.session[name] = quantity
+        return render(request,'displayitem.html',{'form':form})
+    else:
         return render(request,'additem.html',{'form':form})
-    # else:
-    #     return render(request,'additem.html',{'form':form})
 def display_view(request):
     return render(request,'displayitem.html')
